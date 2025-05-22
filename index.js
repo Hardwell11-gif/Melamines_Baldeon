@@ -6,3 +6,16 @@ document.getElementById('menu-icon').addEventListener('click', function () {
     smallMenu.style.display = 'flex';
   }
 });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.getElementById('small-menu');
+    const navItems = document.querySelectorAll('.nav-text');
+
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        if (menu) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  });
